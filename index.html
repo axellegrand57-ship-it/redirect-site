@@ -3,15 +3,10 @@
   <body>
     <h1>Connexion en cours...</h1>
     <script>
-      // On récupère le code dans l'adresse (ex: ?code=bu1Fy...)
       const urlParams = new URLSearchParams(window.location.search);
       const code = urlParams.get('code');
-
       if (code) {
-        // La redirection qui "réveille" ton launcher RIFEL
         window.location.href = "rifel://callback?code=" + code;
-      } else {
-        document.body.innerHTML = "<h1>Erreur : aucun code reçu.</h1>";
       }
     </script>
   </body>
