@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Connexion RIFEL...</title>
-  </head>
   <body>
-    <h1>Connexion en cours, veuillez patienter...</h1>
+    <h1>Connexion en cours...</h1>
     <script>
-      // 1. On récupère le code envoyé par Discord dans l'URL
+      // On récupère le code dans l'adresse (ex: ?code=bu1Fy...)
       const urlParams = new URLSearchParams(window.location.search);
       const code = urlParams.get('code');
 
       if (code) {
-        // 2. On redirige vers ton protocole personnalisé pour ouvrir ton launcher
+        // La redirection qui "réveille" ton launcher RIFEL
         window.location.href = "rifel://callback?code=" + code;
       } else {
-        document.body.innerHTML = "<h1>Erreur : Aucun code reçu de Discord.</h1>";
+        document.body.innerHTML = "<h1>Erreur : aucun code reçu.</h1>";
       }
     </script>
   </body>
