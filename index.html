@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <body>
     <h1>Connexion en cours...</h1>
@@ -8,7 +9,7 @@
       if (code) {
         window.location.href = "rifel://callback?code=" + code;
       } else {
-        document.body.innerHTML = "Erreur : aucun code reçu.";
+        document.body.innerHTML = "<h1>Erreur : aucun code reçu.</h1>";
       }
     </script>
   </body>
