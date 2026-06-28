@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h1>Connexion en cours...</h1>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code');
+
+      if (code) {
+        window.location.href = "rifel://callback?code=" + code;
+      } else {
+        document.body.innerHTML = "Erreur : aucun code reçu.";
+      }
+    </script>
+  </body>
+</html>
